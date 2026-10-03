@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>회의록 정리기</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>회의록 정리기</h1>
+
+<section class="card">
+  <h2>회의록 넣기</h2>
+  <input id="title" placeholder="제목">
+  <input id="met_at" type="datetime-local">
+  <input id="attendees" placeholder="참석자 (쉼표로)">
+  <div class="row">
+    <input id="file" type="file" accept=".mp3,.wav">
+    <button id="btnUp">받아쓰기</button>
+  </div>
+  <textarea id="body" rows="8" placeholder="녹취 파일을 올리거나 메모를 직접 붙여넣으세요"></textarea>
+  <button id="btnSave" class="primary">정리하기</button>
+  <p id="msg"></p>
+</section>
+
+<section class="card">
+  <h2>목록</h2>
+  <ul id="list"></ul>
+</section>
+
+<section class="card" id="detail" hidden>
+  <h2 id="dTitle"></h2>
+  <p id="dMeta" class="meta"></p>
+  <h3>요약</h3><p id="dSummary"></p>
+  <h3>결정사항</h3><ul id="dDecisions"></ul>
+  <h3>할 일</h3><ul id="dTodos"></ul>
+  <button id="btnDel" class="danger">삭제</button>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
